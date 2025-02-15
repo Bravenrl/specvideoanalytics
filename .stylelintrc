@@ -2,8 +2,7 @@
   "defaultSeverity": "warning",
   "extends": [
     "stylelint-config-recommended-scss",
-    "stylelint-config-recess-order",
-    "plugin:prettier/recommended"
+    "stylelint-config-recess-order"
   ],
   "ignoreFiles": ["**/*.js"],
   "at-rule-no-unknown": [
