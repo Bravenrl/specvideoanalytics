@@ -1,0 +1,23 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order",
+    "plugin:prettier/recommended"
+  ],
+  "ignoreFiles": ["**/*.js"],
+  "at-rule-no-unknown": [
+    true,
+    {
+      "ignoreAtRules": [
+        "mixin",
+        "define-mixin",
+        "include",
+        "content",
+        "rules",
+        "each",
+        "import"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+.order__field {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  input[type='text'] {
+    @include input;
+  }
+
+  textarea {
+    width: 100%;
+    height: 142px;
+    resize: none;
+    border: 2px solid $black-blue-text;
+    outline: none;
+    offset: none;
+  }
+
+  textarea:focus,
+  textarea:hover,
+  textarea:active {
+    border: 2px solid $radio-green;
+  }
+
+  &::placeholder {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $black-opacity30;
+
+    @media (min-width: $tablet-width) {
+      font-size: 19px;
+    }
+  }
+
+  label {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      font-size: 19px;
+    }
+  }
+}
+
+.order__content-wrapper {
+  @include content-wrapper;
+}
+
+.order__title {
+  @include title;
+}
+
+.order__submit-wrapper {
+  @include margin-wrapper;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 39px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 240px;
+    margin-bottom: 84px;
+    margin-left: 220px;
+  }
+}
+
+.order__submit-button {
+  width: 100%;
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin-top: 0;
+  }
+}
+
+.order__require-text {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}

@@ -1,0 +1,36 @@
+.card-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 75px;
+  border-top: 1px solid $gray-border;
+}
+
+.card-cart__price {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.card-cart__btn {
+  width: 25%;
+  height: 50%;
+  text-align: right;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+}
+
+.card-cart__svg {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: $green-text;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

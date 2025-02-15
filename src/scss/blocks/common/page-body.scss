@@ -1,0 +1,21 @@
+.page__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans';
+}
+
+.page-header {
+  flex: 0 0 auto;
+}
+
+.page-main {
+  flex: 1 1 auto;
+}
+
+.page-footer {
+  flex: 0 0 auto;
+}

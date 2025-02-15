@@ -1,0 +1,21 @@
+.main-nav {
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    padding-left: 18%;
+    font-weight: 700;
+    color: $black;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+    }
+  }
+}

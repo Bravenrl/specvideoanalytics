@@ -1,0 +1,29 @@
+.social {
+  @media (min-width: $tablet-width) {
+    height: 65px;
+    background-color: $social-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: inherit;
+  }
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.social__link {
+  @include footer-svg;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+

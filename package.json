@@ -1,0 +1,64 @@
+{
+  "name": "specvideo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "stylelint": "stylelint \"source/scss/**/*.scss\"",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-file-include": "^0.14.8",
+    "@types/gulp-imagemin": "^8.0.6",
+    "@types/gulp-plumber": "^0.0.37",
+    "@types/gulp-rename": "^2.0.6",
+    "@types/gulp-sass": "^5.0.4",
+    "@types/gulp-terser": "^1.2.6",
+    "autoprefixer": "10.4.20",
+    "browser-sync": "3.0.3",
+    "del": "8.0.0",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-prettier": "5.2.3",
+    "gulp": "5.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-file-include": "2.3.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "6.0.0",
+    "gulp-svgstore": "9.0.0",
+    "gulp-terser": "2.1.0",
+    "gulp-w3c-html-validator": "5.3.0",
+    "gulp-webp": "5.0.0",
+    "postcss": "8.5.2",
+    "postcss-csso": "6.0.1",
+    "postcss-scss": "4.0.9",
+    "prettier": "3.5.1",
+    "sass": "1.85.0",
+    "stylelint": "16.14.1",
+    "stylelint-config-recess-order": "6.0.0",
+    "stylelint-config-recommended-scss": "14.1.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "airbnb"
+    ]
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module"
+}

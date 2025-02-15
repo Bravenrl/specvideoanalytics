@@ -1,0 +1,48 @@
+.order-email {
+  @include fieldset-padding-bottom;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $gray-border;
+  }
+}
+
+.order-email__content-wrapper {
+  @include content-wrapper;
+  position: relative;
+}
+
+.order-email__input {
+  @include input;
+}
+
+.order-email__title {
+  @include title;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.order-email__input-svg {
+  position: absolute;
+  top: 55%;
+  right: 6px;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    top: 40%;
+    right: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 6px;
+  }
+}
+
+.order-email__input:hover + .order-email__input-svg,
+.order-email__input:active + .order-email__input-svg,
+.order-email__input:focus + .order-email__input-svg {
+  opacity: 1;
+  fill: $radio-green;
+}
