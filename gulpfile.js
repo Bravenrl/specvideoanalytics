@@ -62,6 +62,9 @@ const copyImages = () =>
     dest('build/img')
   );
 
+const copyIcons = () =>
+  src(['src/img/icons/*.svg']).pipe(dest('build/img/icons'));
+
 // Sprite
 const createSprite = () =>
   src('src/img/icons/**/*.svg')
@@ -109,7 +112,7 @@ const build = series(
   clean,
   createCopy,
   copyImages,
-  parallel(styles, minifyHtml, compressScripts, createSprite, createWebp)
+  parallel(styles, minifyHtml, compressScripts, createSprite)
 );
 
 // Default
@@ -118,7 +121,7 @@ export default series(
   clean,
   createCopy,
   copyImages,
-  parallel(styles, minifyHtml, compressScripts, createSprite, createWebp),
+  parallel(styles, minifyHtml, compressScripts, createSprite),
   series(server, watcher)
 );
 
