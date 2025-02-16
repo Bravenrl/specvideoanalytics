@@ -1,21 +1,29 @@
 <!doctype html>
 <html lang="ru">
-  <head>
+  <head class="boby">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Спецвидеоаналитика</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
-      <div class="container">
+      <div class="header__container">
         <div class="header__top">
-          <img
-            src="img/logo.svg"
-            width="235"
-            height="39"
-            alt="Спецвидеоаналитика логотип"
-          />
+          <picture class="header__logo">
+            <source media="(min-width: 300px)" srcset="img/logo.svg" />
+            <img
+              src="img/logo-min.svg"
+              width="235"
+              height="39"
+              alt="Спецвидеоаналитика логотип"
+            />
+          </picture>
+
+          <button class="menu__toggler">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="toggler__center"></span>
+          </button>
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
@@ -42,17 +50,21 @@
             </ul>
           </nav>
         </div>
-        <div class="header__hero">
-          <h1 class="header__title">
-            Умный шлагбаум c распознаванием номеров и спецтранспорта
-          </h1>
-          <h2 class="header__subtitle">
-            Система пропуска автомобилей при помощи искусственного интеллекта
-          </h2>
-        </div>
       </div>
     </header>
     <main>
+      <section class="hero">
+        <div class="container">
+          <div class="header__hero">
+            <h1 class="header__title">
+              Умный шлагбаум c распознаванием номеров и спецтранспорта
+            </h1>
+            <h2 class="header__subtitle">
+              Система пропуска автомобилей при помощи искусственного интеллекта
+            </h2>
+          </div>
+        </div>
+      </section>
       <section class="features">
         <div class="container">
           <h2>О СИСТЕМЕ</h2>
@@ -401,8 +413,9 @@
           </div>
 
           <address class="footer__address--mobile">
-            ООО "Спецвидеоаналитика" </br> 196084 город Санкт-Петербург, </br> Кронверкский
-            пр., 49
+            ООО "Спецвидеоаналитика" <br />
+            196084 город Санкт-Петербург, <br />
+            Кронверкский пр., 49
           </address>
           <div class="footer__copyright">
             <p>Copyright © 2025 ICV Limited</p>
@@ -410,5 +423,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/index.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,246 @@
+@use './global/mixins';
+@use './global/vars';
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(
+      to bottom,
+      #ffffff 50%,
+      rgba(255, 255, 255, 0.5) 70%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+  }
+}
+
+.header__container {
+  max-width: vars.$max-content-width;
+  padding: 0 0.938rem;
+  margin: 0 auto;
+  @include mixins.tablet {
+    padding: 0 2.5rem;
+  }
+
+  @include mixins.desktop {
+    padding: 0 3.125rem;
+  }
+  @include mixins.bigScreen {
+    padding: 0 13.125rem;
+  }
+}
+
+.header__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.125rem;
+  padding-top: 1.938rem;
+  margin-bottom: -5.125rem;
+
+  @include mixins.laptop {
+    justify-content: flex-start;
+    padding-top: 1.688rem;
+  }
+
+  @include mixins.desktop {
+    height: 5.813rem;
+    margin-bottom: -5.813rem;
+  }
+  @include mixins.bigScreen {
+    padding-top: 1.313rem;
+  }
+}
+
+.header__logo {
+  position: relative;
+  z-index: 3;
+  display: block;
+  flex-shrink: 0;
+  & > img {
+    width: 35px;
+    height: 35px;
+
+    @include mixins.minScreen {
+      width: 212px;
+      height: 35px;
+    }
+
+    @include mixins.phone {
+      width: 235px;
+      height: 39px;
+    }
+
+    @include mixins.tablet {
+      margin-right: 20px;
+    }
+
+    @include mixins.laptop {
+      width: 309px;
+      height: 51px;
+      margin-right: 64px;
+    }
+
+    @include mixins.desktop {
+      width: 309px;
+      height: 51px;
+      margin-right: 91px;
+    }
+    @include mixins.bigScreen {
+      width: 471px;
+      height: 79px;
+      margin-right: 195px;
+    }
+  }
+}
+
+.menu__toggler {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 60px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    content: '';
+    background-color: vars.$color-primary;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  & span {
+    display: block;
+    width: 72%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: vars.$color-primary;
+    border-radius: 2px;
+    transition: opacity 0.1s ease;
+  }
+
+  &--active {
+    & span {
+      opacity: 0;
+    }
+
+    &::before {
+      top: 12px;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      bottom: 12px;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.menu {
+  @include mixins.onlyPhone {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 9.375rem 1.25rem 1.25rem;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    transition: all 0.3s ease;
+    &--active {
+      top: 0;
+    }
+  }
+  @include mixins.tablet {
+    flex-grow: 1;
+  }
+}
+
+ul.menu__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include mixins.tablet {
+    z-index: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+  }
+}
+
+.menu__item {
+  @include mixins.onlyPhone {
+    &:not(:last-child)::after {
+      display: block;
+      width: 80%;
+      height: 2px;
+      margin: 0 auto;
+      text-align: center;
+      content: '';
+      background-color: vars.$color-primary;
+    }
+  }
+}
+
+.menu__link {
+  display: block;
+  width: 100%;
+  padding: 30px 0;
+  font-size: 1.875rem;
+  line-height: 1.563rem;
+  color: vars.$color-primary;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mixins.tablet {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: vars.$color-secondary;
+    text-transform: none;
+  }
+
+  @include mixins.smallLaptop {
+    font-size: 1.25rem;
+  }
+
+  @include mixins.laptop {
+    font-size: 1.438rem;
+  }
+}

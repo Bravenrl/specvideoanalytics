@@ -11,7 +11,6 @@ import gulpSass from 'gulp-sass';
 import svgstore from 'gulp-svgstore';
 import terser from 'gulp-terser';
 import { htmlValidator } from 'gulp-w3c-html-validator';
-import webp from 'gulp-webp';
 import csso from 'postcss-csso';
 import dartSass from 'sass';
 
@@ -45,25 +44,13 @@ const minifyHtml = () =>
 
 // Js
 const compressScripts = () =>
-  src('src/js/script.js', { allowEmpty: true })
+  src('src/js/index.js', { allowEmpty: true })
     .pipe(terser())
-    .pipe(rename('script.min.js'))
+    .pipe(rename('index.min.js'))
     .pipe(dest('build/js'))
     .pipe(browser.stream());
 
 // Images
-const createWebp = () =>
-  src('src/img/**/*.{jpg,png}')
-    .pipe(webp({ quality: 90 }))
-    .pipe(dest('build/img'));
-
-const copyImages = () =>
-  src(['src/img/**/*.{jpg,png,svg}', '!src/img/icons/*.svg']).pipe(
-    dest('build/img')
-  );
-
-const copyIcons = () =>
-  src(['src/img/icons/*.svg']).pipe(dest('build/img/icons'));
 
 // Sprite
 const createSprite = () =>
@@ -94,9 +81,14 @@ const watcher = () => {
 
 // Copy
 const createCopy = done => {
-  src(['src/fonts/*.{woff2,woff}', 'src/*.ico'], {
-    base: 'src',
-  }).pipe(dest('build'));
+  src(
+    [
+      'src/fonts/*.{woff2,woff}',
+      'src/*.ico',
+      'src/img/*.{webp,png,jpg,gif,svg}',
+    ],
+    { encoding: false, base: 'src' }
+  ).pipe(dest('build'));
   done();
 };
 
@@ -111,7 +103,6 @@ const clean = async done => {
 const build = series(
   clean,
   createCopy,
-  copyImages,
   parallel(styles, minifyHtml, compressScripts, createSprite)
 );
 
@@ -120,7 +111,6 @@ const build = series(
 export default series(
   clean,
   createCopy,
-  copyImages,
   parallel(styles, minifyHtml, compressScripts, createSprite),
   series(server, watcher)
 );

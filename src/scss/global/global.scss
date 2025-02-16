@@ -1,3 +1,6 @@
+@use './mixins';
+@use './vars';
+
 .page {
   height: 100dvh;
 }
@@ -13,4 +16,16 @@
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.container {
+  margin: 0 vars.$mobile-margin;
+
+  @include mixins.tablet {
+    margin: 0 vars.$tablet-margin;
+  }
+
+  @include mixins.bigScreen {
+    margin: 0 vars.$big-screen-margin;
+  }
 }
