@@ -1,0 +1,142 @@
+@use './global/mixins';
+@use './global/vars';
+
+.features {
+  max-width: vars.$max-content-width;
+  padding: 2.25rem 0.938rem 3rem;
+  margin: 0 auto;
+  text-align: center;
+  @include mixins.tablet {
+    padding: 7.938rem 2.5rem 7.938rem;
+  }
+  @include mixins.desktop {
+    padding: 7rem 3.125rem 7rem;
+  }
+  @include mixins.bigScreen {
+    padding: 7rem 13.125rem 7rem;
+  }
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: minmax(0, 360px);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.25rem;
+  @include mixins.smallLaptop {
+    grid-template-columns: repeat(2, minmax(0, 540px));
+    row-gap: 4rem;
+    margin-top: 6.25rem;
+  }
+  @include mixins.desktop {
+    grid-template-columns: repeat(4, minmax(0, 360px));
+  }
+}
+
+.feature__item__header {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 252px;
+  padding: 5px;
+  color: vars.$color-white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mixins.tablet {
+    height: 393px;
+    padding: 10px;
+  }
+  @include mixins.desktop {
+    height: 261px;
+    padding: 5px;
+  }
+}
+
+.features__item {
+  &:nth-child(1) .feature__item__header {
+    background-image: image-set(
+      url('../img/about-1.webp') type('image/webp'),
+      url('../img/about-1.jpg') type('image/jpeg')
+    );
+  }
+  &:nth-child(2) .feature__item__header {
+    background-image: image-set(
+      url('../img/about-2.webp') type('image/webp'),
+      url('../img/about-2.jpg') type('image/jpeg')
+    );
+  }
+  &:nth-child(3) .feature__item__header {
+    background-image: image-set(
+      url('../img/about-3.webp') type('image/webp'),
+      url('../img/about-3.jpg') type('image/jpeg')
+    );
+  }
+
+  &:nth-child(4) .feature__item__header {
+    background-image: image-set(
+      url('../img/about-4.webp') type('image/webp'),
+      url('../img/about-4.jpg') type('image/jpeg')
+    );
+  }
+}
+
+.feature__item__header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.features__item__title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  @include mixins.smallLaptop {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  @include mixins.desktop {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+.features__item__keys__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 7px;
+  column-gap: 7px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-width: 175px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.features__item__key {
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 400;
+  background-color: vars.$color-primary;
+  border: solid 2px vars.$color-white;
+  border-radius: 19px;
+}
+
+.features__item p {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: vars.$color-secondary;
+  text-align: left;
+  @include mixins.tablet {
+    font-size: 1.25rem; // 20px
+    line-height: 1.875rem;
+  }
+  @include mixins.desktop {
+    font-size: 1.438rem;
+  }
+}
