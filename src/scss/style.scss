@@ -5,65 +5,14 @@
 @use './global/global';
 @use './global/keyframes';
 @use './blocks/header';
+@use './blocks/hero';
 
 body.menu--active {
   @include mixins.onlyPhone {
     overflow: hidden;
-  }
-}
-
-.hero {
-  width: 100%;
-  max-width: vars.$max-content-width;
-  min-height: 50rem;
-  margin: 0 auto;
-  background-image: image-set(
-    url('../img/hero-bg-mobile.webp') type('image/webp'),
-    url('../img/hero-bg-mobile.jpg') type('image/jpeg')
-  );
-  @media (min-resolution: 2dppx) {
-    background-image: image-set(
-      url('../img/hero-bg-mobile@x2.webp') type('image/webp'),
-      url('../img/hero-bg-mobile@x2.jpg') type('image/jpeg')
-    );
-  }
-
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-
-  @include mixins.phone {
-    background-image: image-set(
-      url('../img/hero-bg-laptop.webp') type('image/webp'),
-      url('../img/hero-bg-laptop.jpg') type('image/jpeg')
-    );
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(
-        url('../img/hero-bg-laptop@x2.webp') type('image/webp'),
-        url('../img/hero-bg-laptop@x2.jpg') type('image/jpeg')
-      );
+    .hero__subtitle__container,
+    .hero__title {
+      opacity: 0;
     }
-    background-size: 110% auto;
-  }
-
-  @include mixins.tablet {
-    background-size: cover;
-  }
-
-  @include mixins.laptop {
-    background-image: image-set(
-      url('../img/hero-bg-desktop.webp') type('image/webp'),
-      url('../img/hero-bg-desktop.jpg') type('image/jpeg')
-    );
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(
-        url('../img/hero-bg-desktop@x2.webp') type('image/webp'),
-        url('../img/hero-bg-desktop@x2.jpg') type('image/jpeg')
-      );
-    }
-  }
-
-  @include mixins.desktop {
-    min-height: 60.625rem;
   }
 }

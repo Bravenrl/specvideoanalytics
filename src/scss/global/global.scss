@@ -2,7 +2,9 @@
 @use './vars';
 
 .page {
-  height: 100dvh;
+  min-height: 100dvh;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
 }
 
 .visually-hidden {

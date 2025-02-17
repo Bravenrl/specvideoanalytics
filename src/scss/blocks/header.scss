@@ -200,8 +200,12 @@ ul.menu__list {
     z-index: 3;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    column-gap: 5px;
     justify-content: space-between;
+  }
+
+  @include mixins.laptop {
+    column-gap: 10px;
   }
 }
 
@@ -224,6 +228,7 @@ ul.menu__list {
   width: 100%;
   padding: 30px 0;
   font-size: 1.875rem;
+  font-weight: 600;
   line-height: 1.563rem;
   color: vars.$color-primary;
   text-align: center;
@@ -231,7 +236,8 @@ ul.menu__list {
 
   @include mixins.tablet {
     padding: 10px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: vars.$color-secondary;
     text-transform: none;
   }

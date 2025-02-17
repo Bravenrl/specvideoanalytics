@@ -1,7 +1,7 @@
 $breakpoint-xxs: 300px;
 $breakpoint-xs: 376px;
 $breakpoint-sm: 769px;
-$breakpoint-pre-md: 886px;
+$breakpoint-pre-md: 987px;
 $breakpoint-md: 1200px;
 $breakpoint-lg: 1600px;
 $breakpoint-xl: 1920px;
@@ -25,7 +25,7 @@ $breakpoint-xl: 1920px;
 }
 
 @mixin smallLaptop {
-  @media only screen and (min-width: 886px) {
+  @media only screen and (min-width: $breakpoint-pre-md) {
     @content;
   }
 }

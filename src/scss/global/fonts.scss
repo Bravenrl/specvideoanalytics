@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400; //Regular
   src: url('../fonts/manrope-v15-cyrillic_latin-regular.woff2') format('woff2');
   font-display: swap;
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 500; //Medium
   src: url('../fonts/manrope-v15-cyrillic_latin-500.woff2') format('woff2');
   font-display: swap;
 }
@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 600; //SemiBold
   src: url('../fonts/manrope-v15-cyrillic_latin-600.woff2') format('woff2');
   font-display: swap;
 }
@@ -28,7 +28,7 @@
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700; //Bold
   src: url('../fonts/manrope-v15-cyrillic_latin-700.woff2') format('woff2');
   font-display: swap;
 }
@@ -37,7 +37,7 @@
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 800; //ExtraBold
   src: url('../fonts/manrope-v15-cyrillic_latin-800.woff2') format('woff2');
   font-display: swap;
 }
