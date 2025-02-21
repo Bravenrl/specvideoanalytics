@@ -7,6 +7,7 @@
 @use './blocks/header';
 @use './blocks/hero';
 @use './blocks/features';
+@use './blocks/solutions';
 
 body.menu--active {
   @include mixins.onlyPhone {

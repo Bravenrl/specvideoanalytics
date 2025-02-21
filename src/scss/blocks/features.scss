@@ -3,17 +3,17 @@
 
 .features {
   max-width: vars.$max-content-width;
-  padding: 2.25rem 0.938rem 3rem;
+  padding: 2.25rem vars.$mobile-padding 3rem;
   margin: 0 auto;
   text-align: center;
   @include mixins.tablet {
-    padding: 7.938rem 2.5rem 7.938rem;
+    padding: 7.938rem vars.$tablet-padding 7.938rem;
   }
   @include mixins.desktop {
-    padding: 7rem 3.125rem 7rem;
+    padding: 7rem vars.$laptop-padding 7rem;
   }
   @include mixins.bigScreen {
-    padding: 7rem 13.125rem 7rem;
+    padding: 7rem vars.$big-screen-padding 7rem;
   }
 }
 
@@ -95,8 +95,13 @@
 
 .features__item__title {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
+
+  @include mixins.phone {
+    font-size: 14px;
+  }
+
   @include mixins.smallLaptop {
     margin-bottom: 14px;
     font-size: 16px;
@@ -113,18 +118,25 @@
   column-gap: 7px;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  min-width: 175px;
+  width: 100%;
+  min-width: 50%;
   padding-right: 5px;
   padding-left: 5px;
+  @include mixins.phone {
+    min-width: 175px;
+  }
 }
 .features__item__key {
   padding: 3px 8px;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 400;
   background-color: vars.$color-primary;
   border: solid 2px vars.$color-white;
   border-radius: 19px;
+
+  @include mixins.minScreen {
+    font-size: 10px;
+  }
 }
 
 .features__item p {
@@ -133,7 +145,7 @@
   color: vars.$color-secondary;
   text-align: left;
   @include mixins.tablet {
-    font-size: 1.25rem; // 20px
+    font-size: 1.25rem;
     line-height: 1.875rem;
   }
   @include mixins.desktop {

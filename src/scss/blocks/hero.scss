@@ -2,13 +2,14 @@
 @use './global/vars';
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 3.438rem;
   width: 100%;
   max-width: vars.$max-content-width;
   min-height: 50rem;
-  padding: 7.375rem 0.938rem 1.5rem;
+  padding: 7.375rem vars.$mobile-padding 1.5rem;
   margin: 0 auto;
   background-image: image-set(
     url('../img/hero-bg-mobile.webp') type('image/webp'),
@@ -42,8 +43,8 @@
   @include mixins.tablet {
     align-items: center;
     justify-content: space-between;
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding-right: vars.$tablet-padding;
+    padding-left: vars.$tablet-padding;
     background-size: cover;
   }
 
@@ -62,11 +63,24 @@
 
   @include mixins.desktop {
     min-height: 60.625rem;
-    padding: 11.5rem 3.125rem 3.063rem;
+    padding: 11.5rem vars.$laptop-padding 3.063rem;
   }
 
   @include mixins.bigScreen {
-    padding: 8.875rem 13.125rem 1.875rem;
+    padding: 8.875rem vars.$big-screen-padding 1.875rem;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(-50vw + 50%);
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    content: '';
+    background: vars.$color-bg;
   }
 }
 

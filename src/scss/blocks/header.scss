@@ -29,17 +29,17 @@
 
 .header__container {
   max-width: vars.$max-content-width;
-  padding: 0 0.938rem;
+  padding: 0 vars.$mobile-padding;
   margin: 0 auto;
   @include mixins.tablet {
-    padding: 0 2.5rem;
+    padding: 0 vars.$tablet-padding;
   }
 
   @include mixins.desktop {
-    padding: 0 3.125rem;
+    padding: 0 vars.$laptop-padding;
   }
   @include mixins.bigScreen {
-    padding: 0 13.125rem;
+    padding: 0 vars.$big-screen-padding;
   }
 }
 
