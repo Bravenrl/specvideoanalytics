@@ -3,6 +3,7 @@
 
 .solutions {
   min-width: 100vw;
+  color: vars.$color-black;
   background: vars.$color-bg;
 }
 
@@ -82,11 +83,11 @@
   gap: 6px;
   align-items: center;
   justify-content: center;
-
   & > h4 {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.875rem;
+    color: vars.$color-black;
   }
 
   & > svg {

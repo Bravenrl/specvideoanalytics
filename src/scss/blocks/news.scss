@@ -1,2 +1,126 @@
 @use './global/mixins';
 @use './global/vars';
+
+.news {
+  min-width: 100vw;
+  background: vars.$color-bg;
+}
+
+.news__container {
+  max-width: vars.$max-content-width;
+  padding: 2.25rem 0 3.125rem;
+  margin: 0 auto;
+  text-align: center;
+  @include mixins.tablet {
+    padding: 6.688rem vars.$tablet-padding 6.688rem;
+  }
+  @include mixins.desktop {
+    padding: 9.9rem vars.$laptop-padding 10.5rem;
+  }
+  @include mixins.bigScreen {
+    padding: 9.9rem vars.$big-screen-padding 10.5rem;
+  }
+}
+
+.news__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 37px;
+  column-gap: 20px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.25rem;
+  @include mixins.smallLaptop {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 90px;
+    margin-top: 5.125rem;
+  }
+  @include mixins.desktop {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+}
+
+.news__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 706px;
+  padding: 29px 20px 32px;
+  text-align: left;
+  background-color: vars.$color-white;
+  border-radius: 24px;
+
+  & p {
+    font-size: 1rem;
+    line-height: 1.875rem;
+    color: vars.$color-secondary;
+  }
+
+  @include mixins.smallLaptop {
+    min-height: 54.563rem;
+    padding: 30px 42px 47px;
+
+    & p {
+      font-size: 1.438rem;
+    }
+  }
+  @include mixins.desktop {
+    min-height: 56.25rem;
+    padding: 30px 20px 47px;
+  }
+}
+
+.news__article__header {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: vars.$color-black;
+  text-transform: uppercase;
+  border-bottom: 2px solid vars.$color-black;
+  & h3 {
+    font-size: 1.438rem;
+    font-weight: 400;
+
+    line-height: 1.875rem;
+  }
+  @include mixins.smallLaptop {
+    & h3 {
+      font-size: 2.063rem;
+      font-weight: 400;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.news__article__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+  text-align: center;
+  & svg {
+    width: 41px;
+    height: 41px;
+  }
+
+  & p {
+    min-width: 185px;
+    background-color: vars.$color-bg;
+    border: 1px solid vars.$color-secondary;
+    border-radius: 6px;
+  }
+
+  @include mixins.smallLaptop {
+    & p {
+      min-width: 240px;
+    }
+
+    & svg {
+      width: 61px;
+      height: 61px;
+    }
+  }
+}
