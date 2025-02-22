@@ -9,6 +9,10 @@
 @use './blocks/features';
 @use './blocks/solutions';
 @use './blocks/tariffs';
+@use './blocks/about';
+@use './blocks/partners';
+@use './blocks/news';
+@use './blocks/footer';
 
 body.menu--active {
   @include mixins.onlyPhone {
@@ -43,6 +47,7 @@ body.menu--active {
   }
 
   &--fill-width {
+    display: block;
     width: 100%;
   }
 }
