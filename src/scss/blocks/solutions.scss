@@ -58,7 +58,7 @@
         min-content,
         30.625rem
       );
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 6.25rem;
   }
 }
@@ -168,6 +168,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.375rem;
+    color: vars.$color-secondary;
     @include mixins.smallLaptop {
       padding-bottom: 1.375rem;
       font-size: 1.437rem;
@@ -215,5 +216,13 @@
 
   &--full {
     grid-column: 1 / span 2;
+  }
+}
+
+.tariffs__item__price__description--oneline {
+  display: inline-block;
+  min-height: 44px;
+  @include mixins.smallLaptop {
+    min-height: 48px;
   }
 }

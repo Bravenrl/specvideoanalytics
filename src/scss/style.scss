@@ -8,6 +8,7 @@
 @use './blocks/hero';
 @use './blocks/features';
 @use './blocks/solutions';
+@use './blocks/tariffs';
 
 body.menu--active {
   @include mixins.onlyPhone {
@@ -26,5 +27,22 @@ body.menu--active {
   text-align: center;
   @include mixins.tablet {
     font-size: 2.813rem;
+  }
+}
+
+.callback__btn {
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 52px;
+  color: vars.$color-white;
+  text-align: center;
+  background-color: vars.$color-primary;
+  border-radius: 26px;
+  @include mixins.smallLaptop {
+    font-size: 25px;
+  }
+
+  &--fill-width {
+    width: 100%;
   }
 }

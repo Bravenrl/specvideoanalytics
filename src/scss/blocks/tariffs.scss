@@ -1,0 +1,125 @@
+@use './global/mixins';
+@use './global/vars';
+
+.tariffs {
+  max-width: vars.$max-content-width;
+  padding: 2.25rem vars.$mobile-padding 3rem;
+  margin: 0 auto;
+  text-align: center;
+  @include mixins.tablet {
+    padding: 7.938rem vars.$tablet-padding 7.938rem;
+  }
+  @include mixins.desktop {
+    padding: 7rem vars.$laptop-padding 7rem;
+  }
+  @include mixins.bigScreen {
+    padding: 7rem vars.$big-screen-padding 7rem;
+  }
+}
+
+.tariffs__list {
+  display: grid;
+  grid-template-columns: minmax(320px, 360px);
+
+  row-gap: 53px;
+  column-gap: 20px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.25rem;
+  @include mixins.smallLaptop {
+    grid-template-columns: repeat(2, minmax(320px, 360px));
+    row-gap: 27px;
+    margin-top: 6.25rem;
+  }
+  @include mixins.desktop {
+    grid-template-columns: repeat(4, minmax(320px, 360px));
+  }
+}
+
+.tariffs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 590px;
+  padding: 17px 36px 36px;
+  font-size: 16px;
+  line-height: 22px;
+  color: vars.$color-secondary;
+  text-align: left;
+  background-color: vars.$color-white;
+  border: 3px solid vars.$color-primary;
+  border-radius: 44px;
+  @include mixins.smallLaptop {
+    padding: 17px 27px 47px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @include mixins.desktop {
+    padding: 17px 20px 43px;
+  }
+}
+
+.tariffs__item__title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 52px;
+  color: vars.$color-primary;
+  @include mixins.smallLaptop {
+    font-size: 35px;
+  }
+}
+
+.tariffs__item__description {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  @include mixins.minScreen {
+    font-size: 1.125rem;
+  }
+}
+
+.tariffs__item__price {
+  margin-top: 22px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 52px;
+  color: vars.$color-black;
+  @include mixins.smallLaptop {
+    font-size: 50px;
+  }
+}
+
+.tariffs__item__price__period {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  @include mixins.smallLaptop {
+    font-size: 35px;
+  }
+}
+
+.tariffs__item__options {
+  padding: 25px 0 30px;
+  font-weight: 500;
+  @include mixins.smallLaptop {
+    padding: 27px 0 35px;
+  }
+}
+
+.callback__btn {
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 52px;
+  color: vars.$color-white;
+  text-align: center;
+  background-color: vars.$color-primary;
+  border-radius: 26px;
+  @include mixins.smallLaptop {
+    font-size: 25px;
+  }
+
+  &--fill-width {
+    width: 100%;
+  }
+}
