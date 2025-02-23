@@ -51,4 +51,21 @@ body.menu--active {
     display: block;
     width: 100%;
   }
+
+  &:hover {
+    color: vars.$color-white;
+    background-color: vars.$color-primary-light;
+  }
+
+  &:active {
+    color: vars.$color-white;
+    background-color: vars.$color-primary-dark;
+  }
+}
+
+a {
+  color: vars.$color-secondary;
+  &:hover {
+    color: vars.$color-primary;
+  }
 }

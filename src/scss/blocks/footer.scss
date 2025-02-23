@@ -1,2 +1,154 @@
 @use './global/mixins';
 @use './global/vars';
+
+.footer {
+  color: vars.$color-black;
+  background: vars.$color-bg-dark;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-areas:
+    'logo'
+    'contacts'
+    'address'
+    'copyright';
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  justify-items: center;
+  max-width: vars.$max-content-width;
+  padding: 3.375rem vars.$mobile-padding 2.813rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  text-align: center;
+  @include mixins.tablet {
+    grid-template-areas:
+      'logo footer-menu contacts'
+      'address footer-menu contacts'
+      'address footer-menu copyright';
+
+    padding: 6.688rem vars.$tablet-padding 6.688rem;
+  }
+  @include mixins.laptop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include mixins.desktop {
+    padding: 9.9rem vars.$laptop-padding 10.5rem;
+  }
+  @include mixins.bigScreen {
+    padding: 9.9rem vars.$big-screen-padding 10.5rem;
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+  margin-bottom: 1.938rem;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  @include mixins.laptop {
+    width: 346px;
+    height: 58px;
+  }
+}
+
+.footer__logo__container {
+  @include mixins.tablet {
+    place-self: start;
+  }
+}
+
+.footer__address {
+  grid-area: address;
+  margin-bottom: 1.938rem;
+  line-height: 1.875rem;
+  @include mixins.tablet {
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  @include mixins.laptop {
+    font-size: 1.438rem;
+  }
+}
+
+.footer__menu {
+  display: none;
+  grid-area: footer-menu;
+  @include mixins.tablet {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-align: left;
+  }
+
+  @include mixins.laptop {
+    place-self: center;
+  }
+
+  @include mixins.desktop {
+    place-self: center;
+    padding-left: 0;
+  }
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  margin-bottom: 0.813rem;
+  @include mixins.tablet {
+    place-self: start;
+  }
+}
+
+.footer__phone {
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  & a {
+    color: vars.$color-secondary-dark;
+  }
+  @include mixins.tablet {
+    font-size: 1.625rem;
+  }
+
+  @include mixins.laptop {
+    font-size: 1.875rem;
+  }
+}
+
+.footer__email {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  & a {
+    color: vars.$color-secondary-light;
+  }
+  @include mixins.tablet {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+  @include mixins.laptop {
+    font-size: 1.438rem;
+  }
+}
+
+.footer__copyright {
+  grid-area: copyright;
+  line-height: 1.875rem;
+  @include mixins.tablet {
+    align-self: end;
+    justify-self: start;
+    font-size: 1.25rem;
+  }
+  @include mixins.laptop {
+    font-size: 1.438rem;
+  }
+}
