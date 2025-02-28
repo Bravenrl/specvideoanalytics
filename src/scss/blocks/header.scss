@@ -224,32 +224,32 @@ ul.menu__list {
       background-color: vars.$color-primary;
     }
   }
-}
 
-.menu__link {
-  display: block;
-  width: 100%;
-  padding: 30px 0;
-  font-size: 1.875rem;
-  font-weight: 600;
-  line-height: 1.563rem;
-  color: vars.$color-primary;
-  text-align: center;
-  text-transform: uppercase;
+  .menu__link {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.563rem;
+    color: vars.$color-primary;
+    text-align: center;
+    text-transform: uppercase;
 
-  @include mixins.tablet {
-    padding: 10px 0;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: vars.$color-secondary;
-    text-transform: none;
-  }
+    @include mixins.tablet {
+      padding: 10px 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: vars.$color-secondary;
+      text-transform: none;
+    }
 
-  @include mixins.smallLaptop {
-    font-size: 1.25rem;
-  }
+    @include mixins.smallLaptop {
+      font-size: 1.25rem;
+    }
 
-  @include mixins.laptop {
-    font-size: 1.438rem;
+    @include mixins.laptop {
+      font-size: 1.438rem;
+    }
   }
 }

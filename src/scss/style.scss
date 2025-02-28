@@ -52,6 +52,20 @@ body.menu--active {
     width: 100%;
   }
 
+  &--popup {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    &--phone {
+      display: none;
+    }
+
+    &--popup {
+      display: block;
+    }
+  }
+
   &:hover {
     color: vars.$color-white;
     background-color: vars.$color-primary-light;
@@ -67,5 +81,46 @@ a {
   color: vars.$color-secondary;
   &:hover {
     color: vars.$color-primary;
+  }
+}
+
+.modal {
+  min-width: 350px;
+  max-width: 100%;
+  padding: 20px;
+  color: vars.$color-secondary;
+  background-color: vars.$color-white;
+  border: 3px solid vars.$color-primary;
+  border-radius: 44px;
+
+  @include mixins.smallLaptop {
+    padding: 27px;
+  }
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.modal__phone__container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  & a {
+    font-weight: 700;
+    color: vars.$color-secondary-dark;
+    &:hover {
+      color: vars.$color-primary;
+    }
+  }
+
+  @include mixins.laptop {
+    font-size: 1.875rem;
   }
 }
