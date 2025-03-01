@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://specvideoanalytics.com/sitemap.xml
