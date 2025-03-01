@@ -365,7 +365,19 @@
       </section>
       <section class="news" id="news">
         <div class="news__container">
-          <h2 class="section__title">НОВОСТИ</h2>
+          <h2 class="section__title news__title">
+            НОВОСТИ
+
+            <button
+              class="news__toggler__btn"
+              id="news-toggler"
+              aria-label="Свернуть/показать новости"
+            >
+              <svg class="toggler-news__svg" width="61" height="61">
+                <use xlink:href="img/sprite.svg#icon-toggler"></use>
+              </svg>
+            </button>
+          </h2>
           <div class="news__list">
             <article class="news__article">
               <div class="news__article__header">

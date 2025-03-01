@@ -29,15 +29,52 @@
   column-gap: 20px;
   justify-content: center;
   width: 100%;
-  margin-top: 2.25rem;
+  transition: max-height 0.3s ease;
+
   @include mixins.smallLaptop {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 90px;
-    margin-top: 5.125rem;
   }
   @include mixins.desktop {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
+  }
+}
+
+.news__title {
+  position: relative;
+  margin-bottom: 2.25rem;
+  @include mixins.smallLaptop {
+    margin-bottom: 5.125rem;
+  }
+}
+
+.news__toggler__btn {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 6.25rem);
+  width: 40px;
+  height: 40px;
+  & svg {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+  }
+  transform: translate(-50%, -50%);
+  @include mixins.tablet {
+    left: calc(50% + 12.5rem);
+    display: none;
+    width: 60px;
+    height: 60px;
+    & svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &--closed {
+    & svg {
+      transform: rotate(180deg);
+    }
   }
 }
 
