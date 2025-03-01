@@ -1,4 +1,5 @@
 /source/css/style.min.css
 *.js
 *.html
+*.xml
 /node_modules

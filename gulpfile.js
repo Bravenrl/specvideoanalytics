@@ -86,12 +86,19 @@ const createCopy = done => {
       'src/fonts/*.{woff2,woff}',
       'src/*.ico',
       'src/img/*.{webp,png,jpg,gif,svg}',
+      'src/*.webmanifest',
     ],
     { encoding: false, base: 'src' }
   ).pipe(dest('build'));
   done();
 };
 
+const copyFavicons = done => {
+  src(['src/img/favicon/*.{webp,png,jpg,gif,svg,ico}'], {
+    encoding: false,
+  }).pipe(dest('build/'));
+  done();
+};
 // Clean
 const clean = async done => {
   await deleteAsync(['build/']);
@@ -103,6 +110,7 @@ const clean = async done => {
 const build = series(
   clean,
   createCopy,
+  copyFavicons,
   parallel(styles, minifyHtml, compressScripts, createSprite)
 );
 
@@ -111,6 +119,7 @@ const build = series(
 export default series(
   clean,
   createCopy,
+  copyFavicons,
   parallel(styles, minifyHtml, compressScripts, createSprite),
   series(server, watcher)
 );

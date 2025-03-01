@@ -83,7 +83,7 @@
   gap: 6px;
   align-items: center;
   justify-content: center;
-  & > h4 {
+  & > h3 {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.875rem;
@@ -98,7 +98,7 @@
   @include mixins.tablet {
     gap: 14px;
     margin-bottom: 1.625rem;
-    & > h4 {
+    & > h3 {
       font-size: 1.437rem;
     }
 
