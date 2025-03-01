@@ -32,8 +32,8 @@
   transition: max-height 0.3s ease;
 
   @include mixins.smallLaptop {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 90px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
   }
   @include mixins.desktop {
     grid-template-columns: repeat(3, 1fr);
@@ -83,8 +83,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 706px;
+  min-height: 506px;
   padding: 29px 20px 32px;
+  overflow: hidden;
   text-align: left;
   background-color: vars.$color-white;
   border-radius: 24px;
@@ -100,7 +101,7 @@
     padding: 30px 42px 47px;
 
     & p {
-      font-size: 1.438rem;
+      font-size: 1.125rem;
     }
   }
   @include mixins.desktop {
@@ -116,14 +117,14 @@
   text-transform: uppercase;
   border-bottom: 2px solid vars.$color-black;
   & h3 {
-    font-size: 1.438rem;
+    font-size: 1.238rem;
     font-weight: 400;
 
     line-height: 1.875rem;
   }
   @include mixins.smallLaptop {
     & h3 {
-      font-size: 2.063rem;
+      font-size: 1.438rem;
       font-weight: 400;
       line-height: 2.5rem;
     }
@@ -132,6 +133,7 @@
 
 .news__article__footer {
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -144,7 +146,8 @@
   }
 
   & p {
-    min-width: 185px;
+    flex-grow: 1;
+    max-width: 11.5rem;
     background-color: vars.$color-bg;
     border: 1px solid vars.$color-secondary;
     border-radius: 6px;
@@ -152,12 +155,30 @@
 
   @include mixins.smallLaptop {
     & p {
-      min-width: 240px;
+      max-width: 15rem;
+    }
+
+    & svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @include mixins.desktop {
+    & p {
+      max-width: 15rem;
     }
 
     & svg {
       width: 61px;
       height: 61px;
+    }
+  }
+
+  a:hover {
+    color: vars.$color-primary;
+    & svg {
+      fill: vars.$color-primary;
     }
   }
 }
