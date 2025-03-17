@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://specvideoanalytics.com/sitemap.xml
+Sitemap: http://icv.systems/sitemap.xml

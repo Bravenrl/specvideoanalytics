@@ -105,6 +105,11 @@
   @include mixins.smallLaptop {
     padding: 27px 0 35px;
   }
+
+  .item__options-hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
 }
 
 .callback__btn {
