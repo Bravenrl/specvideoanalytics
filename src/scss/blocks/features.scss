@@ -63,17 +63,31 @@
       url('../img/about-1.webp') type('image/webp'),
       url('../img/about-1.jpg') type('image/jpeg')
     );
+
+    background-image: -webkit-image-set(
+      url('../img/about-1.webp'),
+      url('../img/about-1.jpg')
+    );
   }
   &:nth-child(2) .feature__item__header {
     background-image: image-set(
       url('../img/about-2.webp') type('image/webp'),
       url('../img/about-2.jpg') type('image/jpeg')
     );
+    background-image: -webkit-image-set(
+      url('../img/about-2.webp'),
+      url('../img/about-2.jpg')
+    );
+
   }
   &:nth-child(3) .feature__item__header {
     background-image: image-set(
       url('../img/about-3.webp') type('image/webp'),
       url('../img/about-3.jpg') type('image/jpeg')
+    );
+    background-image: -webkit-image-set(
+      url('../img/about-3.webp'),
+      url('../img/about-3.jpg')
     );
   }
 
@@ -81,6 +95,10 @@
     background-image: image-set(
       url('../img/about-4.webp') type('image/webp'),
       url('../img/about-4.jpg') type('image/jpeg')
+    );
+    background-image: -webkit-image-set(
+      url('../img/about-4.webp'),
+      url('../img/about-4.jpg')
     );
   }
 }

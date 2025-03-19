@@ -12,8 +12,6 @@
   padding: 7.375rem vars.$mobile-padding 1.5rem;
   margin: 0 auto;
 
-  background-image: url("../img/hero-bg-mobile.webp");
-
   background-image: -webkit-image-set(
     url('../img/hero-bg-mobile.webp') 1x,
     url('../img/hero-bg-mobile@x2.webp') 2x,
@@ -34,9 +32,6 @@
 
 
   @include mixins.phone {
-
-    background-image: url("../img/hero-bg-laptop.webp");
-
     background-image: -webkit-image-set(
       url('../img/hero-bg-laptop.webp') 1x,
       url('../img/hero-bg-laptop@x2.webp') 2x,
@@ -64,9 +59,6 @@
 
   @include mixins.laptop {
 
-    background-image: url("../img/hero-bg-desktop.jpg");
-
-    /* Для Chrome и Safari */
     background-image: -webkit-image-set(
       url('../img/hero-bg-desktop.webp') 1x,
       url('../img/hero-bg-desktop@x2.webp') 2x,
