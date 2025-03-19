@@ -22,7 +22,20 @@ export const styles = () =>
   src('src/scss/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass())
-    .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(
+      postcss([
+        autoprefixer({
+          overrideBrowserslist: [
+            'last 2 versions',
+            'not dead',
+            'not ie <= 11',
+            'not op_mini all',
+            'not < 0.25%',
+          ],
+        }),
+        csso(),
+      ])
+    )
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest('build/css', { sourcemaps: '.' }))
