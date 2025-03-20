@@ -1,0 +1,6 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: http://icv.systems/sitemap.xml

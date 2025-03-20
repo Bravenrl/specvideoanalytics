@@ -100,6 +100,8 @@ const createCopy = done => {
       'src/*.ico',
       'src/img/*.{webp,png,jpg,gif,svg}',
       'src/*.webmanifest',
+      'src/sitemap.xml',
+      'src/robots.txt',
     ],
     { encoding: false, base: 'src' }
   ).pipe(dest('build'));
