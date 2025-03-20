@@ -11,6 +11,7 @@
   min-height: 50rem;
   padding: 7.375rem vars.$mobile-padding 1.5rem;
   margin: 0 auto;
+  background-color: vars.$color-white;
   background-image: url('../img/hero-bg-mobile.webp');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -23,16 +24,19 @@
     background-size: 110% auto;
   }
 
+  @include mixins.bigPhone {
+    background-image: url('../img/hero-bg-laptop.webp');
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/hero-bg-laptop@x2.webp');
+    }
+  }
+
   @include mixins.tablet {
     align-items: center;
     justify-content: space-between;
     padding-right: vars.$tablet-padding;
     padding-left: vars.$tablet-padding;
-    background-image: url('../img/hero-bg-laptop.webp');
     background-size: cover;
-    @media (min-resolution: 2dppx) {
-      background-image: url('../img/hero-bg-laptop@x2.webp');
-    }
   }
 
   @include mixins.laptop {
