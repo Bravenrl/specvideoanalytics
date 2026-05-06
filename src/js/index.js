@@ -48,15 +48,17 @@ const openModalButtons = document.querySelectorAll('.callback__btn--popup');
 const modal = document.querySelector('#modal');
 const closeModalButton = document.querySelector('#close-btn');
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    modal.showModal();
+if (modal && closeModalButton) {
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      modal.showModal();
+    });
   });
-});
 
-closeModalButton.addEventListener('click', () => {
-  modal.close();
-});
+  closeModalButton.addEventListener('click', () => {
+    modal.close();
+  });
+}
 
 /// slider
 
