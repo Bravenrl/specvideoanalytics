@@ -145,18 +145,20 @@ const toggleSection = () => {
   }
 };
 
-(function initNewsToggler() {
-  if (mobileMatch.matches) {
-    closeSection();
-  }
-  newsToggler.addEventListener('click', toggleSection);
-})();
+if (newsToggler && newsContent) {
+  (function initNewsToggler() {
+    if (mobileMatch.matches) {
+      closeSection();
+    }
+    newsToggler.addEventListener('click', toggleSection);
+  })();
 
-mobileMatch.addEventListener('change', () => {
-  if (
-    !mobileMatch.matches &&
-    newsContent.classList.contains('news__list--closed')
-  ) {
-    openSection();
-  }
-});
+  mobileMatch.addEventListener('change', () => {
+    if (
+      !mobileMatch.matches &&
+      newsContent.classList.contains('news__list--closed')
+    ) {
+      openSection();
+    }
+  });
+}
