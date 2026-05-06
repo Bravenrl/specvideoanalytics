@@ -13,6 +13,7 @@
 @use './blocks/partners';
 @use './blocks/news';
 @use './blocks/footer';
+@use './blocks/products';
 
 body.menu--active {
   @include mixins.onlyPhone {
