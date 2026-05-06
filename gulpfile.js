@@ -67,10 +67,17 @@ const compressScripts = () =>
 
 // Sprite
 const createSprite = () =>
-  src('src/img/icons/**/*.svg')
+  src('src/img/icons/*.svg')
     .pipe(rename({ prefix: 'icon-' }))
     .pipe(svgstore())
     .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'));
+
+const createProductsSprite = () =>
+  src('src/img/icons/products/*.svg', { allowEmpty: true })
+    .pipe(rename({ prefix: 'icon-' }))
+    .pipe(svgstore())
+    .pipe(rename('products-sprite.svg'))
     .pipe(dest('build/img'));
 
 // Server
@@ -102,6 +109,7 @@ const createCopy = done => {
       'src/*.webmanifest',
       'src/sitemap.xml',
       'src/robots.txt',
+      'src/public/**/*',
     ],
     { encoding: false, base: 'src' }
   ).pipe(dest('build'));
@@ -126,7 +134,7 @@ const build = series(
   clean,
   createCopy,
   copyFavicons,
-  parallel(styles, minifyHtml, compressScripts, createSprite)
+  parallel(styles, minifyHtml, compressScripts, createSprite, createProductsSprite)
 );
 
 // Default
@@ -135,7 +143,7 @@ export default series(
   clean,
   createCopy,
   copyFavicons,
-  parallel(styles, minifyHtml, compressScripts, createSprite),
+  parallel(styles, minifyHtml, compressScripts, createSprite, createProductsSprite),
   series(server, watcher)
 );
 
