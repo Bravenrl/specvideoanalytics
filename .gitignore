@@ -25,3 +25,7 @@ yarn-error.log*
 .idea
 *.sublime*
 .vscode
+
+# claude
+.superpowers
+.claude

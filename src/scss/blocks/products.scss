@@ -2,8 +2,21 @@
 @use './global/vars';
 
 .product-hero {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background: linear-gradient(120deg, vars.$color-primary-darker 0%, vars.$color-primary 55%, vars.$color-primary-light 100%);
+}
+
+.product-hero__left {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   padding: 7.375rem vars.$mobile-padding 4rem;
-  background-color: vars.$color-primary;
 
   @include mixins.tablet {
     padding: 8rem vars.$tablet-padding 6rem;
@@ -16,11 +29,6 @@
   @include mixins.bigScreen {
     padding: 9rem vars.$big-screen-padding 7rem;
   }
-}
-
-.product-hero__container {
-  max-width: vars.$max-content-width;
-  margin: 0 auto;
 }
 
 .product-hero__title {
@@ -49,6 +57,82 @@
   @include mixins.tablet {
     font-size: 1.25rem;
   }
+}
+
+.product-hero__title-accent {
+  color: #a8caff;
+}
+
+.product-hero__right {
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+  width: 280px;
+  overflow: hidden;
+
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mixins.desktop {
+    width: 360px;
+  }
+}
+
+.product-hero__ring {
+  position: absolute;
+  border-radius: 50%;
+
+  &--outer {
+    top: 50%;
+    right: -110px;
+    width: 360px;
+    height: 360px;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    transform: translateY(-50%);
+  }
+
+  &--inner {
+    top: 50%;
+    right: -45px;
+    width: 230px;
+    height: 230px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%);
+  }
+}
+
+.product-hero__circle {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 20px;
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.product-hero__icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  transform: translateY(-50%);
+}
+
+.product-hero__dot {
+  position: absolute;
+  background: rgba(168, 202, 255, 0.45);
+  border-radius: 50%;
 }
 
 .product-functions {
@@ -172,10 +256,15 @@
 
 .product-docs__dl-btn {
   display: inline-block;
+  max-width: 100%;
   padding: 0 1.5rem;
+  overflow: hidden;
   font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @include mixins.tablet {
+    max-width: 50%;
     font-size: 1rem;
   }
 }

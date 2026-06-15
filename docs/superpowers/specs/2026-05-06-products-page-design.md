@@ -3,19 +3,19 @@
 
 ## Overview
 
-Add a "Продукты" item to the navigation menu that links to a new `products.html` page describing the software product "Система контроля управления доступом ICV 2.0". The page must match the existing site design.
+Add a "Продукты" item to the navigation menu that links to a new `icv_2.html` page describing the software product "Система контроля управления доступом ICV 2.0". The page must match the existing site design.
 
 ---
 
 ## Navigation Changes
 
-Add `<li class="menu__item"><a href="products.html" class="menu__link">Продукты</a></li>` to:
+Add `<li class="menu__item"><a href="icv_2.html" class="menu__link">Продукты</a></li>` to:
 - Header nav `ul.menu__list` (after "Новости", before "Контакты")
 - Footer nav `ul.footer__menu__list` (same position)
 
 ---
 
-## New Page: `src/products.html`
+## New Page: `src/icv_2.html`
 
 Same `<head>`, `<header>`, `<footer>`, and `<dialog>` as `index.html`. The `<main>` contains three sections:
 
@@ -97,7 +97,7 @@ Create `src/public/Opisanie_PO_ICV_2.0.pdf` and `src/public/Rukovodstvo_polzovat
 | Action | Path |
 |--------|------|
 | Modified | `src/index.html` — add "Продукты" nav item |
-| Created | `src/products.html` |
+| Created | `src/icv_2.html` |
 | Created | `src/scss/blocks/products.scss` |
 | Modified | `src/scss/style.scss` — import products.scss |
 | Created | `src/img/icons/products/video-camera.svg` |

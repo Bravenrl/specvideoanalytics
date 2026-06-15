@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-car-recognition" viewBox="0 0 32 32"><g fill="none">
+  <path d="M7 20V18L10 11H22L25 18V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="5" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="10" cy="23" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+  <circle cx="22" cy="23" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="2" y1="14" x2="2" y2="27" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="30" y1="14" x2="30" y2="27" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+</g></symbol><symbol id="icon-integration" viewBox="0 0 32 32"><g fill="none">
+  <rect x="2" y="2" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="19" y="2" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="10.5" y="19" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+  <path d="M7.5 13V19L16 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24.5 13V19L16 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-monitor-online" viewBox="0 0 32 32"><g fill="none">
+  <rect x="2" y="3" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+  <path d="M13 29H19M16 23V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M13 9.5L21 13L13 16.5V9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-parking-zone" viewBox="0 0 32 32"><g fill="none">
+  <rect x="2" y="2" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+  <path d="M11 24V8H19.5C22.5 8 24.5 10 24.5 13C24.5 16 22.5 18 19.5 18H11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-pass-card" viewBox="0 0 32 32"><g fill="none">
+  <rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+  <circle cx="11" cy="14" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 26C6 22.7 8.2 20 11 20C13.8 20 16 22.7 16 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="20" y1="12" x2="27" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="16" x2="27" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="20" x2="25" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</g></symbol><symbol id="icon-video-camera" viewBox="0 0 32 32"><g fill="none">
+  <rect x="1" y="9" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+  <circle cx="11" cy="16" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M21 13L30 10V22L21 19V13Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+</g></symbol></svg>

@@ -244,6 +244,10 @@ ul.menu__list {
       text-transform: none;
     }
 
+    @media only screen and (min-width: 769px) and (max-width: 790px) {
+      font-size: 0.65rem;
+    }
+
     @include mixins.smallLaptop {
       font-size: 1.25rem;
     }

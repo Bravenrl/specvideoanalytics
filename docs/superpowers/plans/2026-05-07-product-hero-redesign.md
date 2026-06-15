@@ -4,7 +4,7 @@
 
 **Goal:** Replace the flat solid-blue `.product-hero` with a modern split-layout — gradient background, decorative concentric rings + camera icon on the right, "ICV 2.0" highlighted in accent blue in the `<h1>`.
 
-**Architecture:** Two source files change — `src/scss/blocks/products.scss` and `src/products.html`. The build command `npm run build` (= `gulp build`) recompiles them into `build/css/style.min.css` and `build/products.html`. No JS changes, no new assets.
+**Architecture:** Two source files change — `src/scss/blocks/products.scss` and `src/icv_2.html`. The build command `npm run build` (= `gulp build`) recompiles them into `build/css/style.min.css` and `build/icv_2.html`. No JS changes, no new assets.
 
 **Tech Stack:** SCSS, HTML5, Gulp
 
@@ -135,10 +135,10 @@ After the existing `.product-hero__desc` block (after line 52 in the original fi
 
 ---
 
-### Task 2: Update `src/products.html` — hero markup
+### Task 2: Update `src/icv_2.html` — hero markup
 
 **Files:**
-- Modify: `src/products.html` lines 117–129
+- Modify: `src/icv_2.html` lines 117–129
 
 - [ ] **Step 1: Replace the hero section interior**
 
@@ -182,7 +182,7 @@ Replace the entire `<section class="product-hero" …>` block (lines 117–129) 
 ### Task 3: Build and visual verification
 
 **Files:**
-- Build output: `build/css/style.min.css`, `build/products.html`
+- Build output: `build/css/style.min.css`, `build/icv_2.html`
 
 - [ ] **Step 1: Run the build**
 
@@ -190,12 +190,12 @@ Replace the entire `<section class="product-hero" …>` block (lines 117–129) 
 npm run build
 ```
 
-Expected: exits 0. `build/css/style.min.css` and `build/products.html` are updated.  
+Expected: exits 0. `build/css/style.min.css` and `build/icv_2.html` are updated.  
 If it fails: check for SCSS syntax errors in `src/scss/blocks/products.scss` (missing semicolons, unclosed braces).
 
 - [ ] **Step 2: Open in browser and verify**
 
-Open `build/products.html` in a browser. Check all three viewport widths:
+Open `build/icv_2.html` in a browser. Check all three viewport widths:
 
 | Width | Expected |
 | --- | --- |
@@ -206,6 +206,6 @@ Open `build/products.html` in a browser. Check all three viewport widths:
 - [ ] **Step 3: Commit**
 
 ```bash
-git add src/scss/blocks/products.scss src/products.html build/products.html build/css/style.min.css build/css/style.min.css.map
+git add src/scss/blocks/products.scss src/icv_2.html build/icv_2.html build/css/style.min.css build/css/style.min.css.map
 git commit -m "feat: modernise product-hero with gradient split-layout and ICV 2.0 accent"
 ```

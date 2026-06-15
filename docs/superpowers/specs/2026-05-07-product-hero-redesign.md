@@ -1,7 +1,7 @@
 # Product Hero Redesign
 
 **Date:** 2026-05-07
-**Scope:** `src/scss/blocks/products.scss` + `src/products.html` (`.product-hero` block only)
+**Scope:** `src/scss/blocks/products.scss` + `src/icv_2.html` (`.product-hero` block only)
 
 ## Goal
 
@@ -54,7 +54,7 @@ On mobile (`< 769px`) `.product-hero__right` is hidden (`display: none`) — the
 
 ## HTML Changes
 
-- `src/products.html`: restructure the interior of `<section class="product-hero">` — two child divs (`.product-hero__left`, `.product-hero__right`)
+- `src/icv_2.html`: restructure the interior of `<section class="product-hero">` — two child divs (`.product-hero__left`, `.product-hero__right`)
 - Wrap "ICV&nbsp;2.0" in `<em class="product-hero__title-accent">` inside `<h1>`
 - Inline SVG for the camera icon (already used elsewhere in the page via sprite — can reuse `#icon-video-camera` from `products-sprite.svg`)
 

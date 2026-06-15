@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a "Продукты" menu item to both navigations linking to a new `products.html` page describing the ICV 2.0 software product.
+**Goal:** Add a "Продукты" menu item to both navigations linking to a new `icv_2.html` page describing the ICV 2.0 software product.
 
 **Architecture:** Static HTML page in the existing Gulp pipeline. A dedicated products sprite is built from `src/img/icons/products/` (separate from the main `sprite.svg`). PDF placeholders live in `src/public/` and are copied as-is to `build/public/`. All styles compile through the single `style.scss` entry point via a new `products.scss` block. The shared `index.js` is guarded so it does not crash on pages without a news section.
 
@@ -25,7 +25,7 @@
 | Create | `src/public/Rukovodstvo_polzovatelya_ICV_2.0.pdf` | Placeholder PDF (will be replaced) |
 | Create | `src/scss/blocks/products.scss` | All product page styles |
 | Modify | `src/scss/style.scss` | Import products.scss |
-| Create | `src/products.html` | Full product page HTML |
+| Create | `src/icv_2.html` | Full product page HTML |
 | Modify | `src/js/index.js` | Null-guard news toggler (prevents crash on products page) |
 | Modify | `src/index.html` | Add "Продукты" nav item to header and footer |
 
@@ -491,17 +491,17 @@ git commit -m "feat: add products page SCSS"
 
 ---
 
-## Task 5: `products.html`
+## Task 5: `icv_2.html`
 
 **Files:**
-- Create: `src/products.html`
+- Create: `src/icv_2.html`
 
 The page is a full copy of the `index.html` shell (same `<head>`, header, footer, dialog) with:
 - Header nav links pointing to `index.html` anchors (not local `#` anchors, which don't exist on this page)
 - `<main>` replaced with 3 product sections
 - Footer nav also updated to `index.html`-relative links
 
-- [ ] **Step 1: Create `src/products.html`**
+- [ ] **Step 1: Create `src/icv_2.html`**
 
 ```html
 <!doctype html>
@@ -605,7 +605,7 @@ The page is a full copy of the `index.html` shell (same `<head>`, header, footer
                 <a href="index.html#news" class="menu__link">Новости</a>
               </li>
               <li class="menu__item">
-                <a href="products.html" class="menu__link">Продукты</a>
+                <a href="icv_2.html" class="menu__link">Продукты</a>
               </li>
               <li class="menu__item">
                 <a href="#footer" class="menu__link">Контакты</a>
@@ -779,7 +779,7 @@ The page is a full copy of the `index.html` shell (same `<head>`, header, footer
               <a href="index.html#news" class="menu__link">Новости</a>
             </li>
             <li class="footer__menu__item">
-              <a href="products.html" class="menu__link">Продукты</a>
+              <a href="icv_2.html" class="menu__link">Продукты</a>
             </li>
             <li class="footer__menu__item">
               <a href="#footer" class="menu__link">Контакты</a>
@@ -817,8 +817,8 @@ The page is a full copy of the `index.html` shell (same `<head>`, header, footer
 - [ ] **Step 2: Commit**
 
 ```bash
-git add src/products.html
-git commit -m "feat: add products.html page"
+git add src/icv_2.html
+git commit -m "feat: add icv_2.html page"
 ```
 
 ---
@@ -828,7 +828,7 @@ git commit -m "feat: add products.html page"
 **Files:**
 - Modify: `src/js/index.js`
 
-`index.js` is the shared JS bundle. On `products.html`, `#news-toggler` and `.news__list` don't exist, so `newsToggler.addEventListener(...)` would throw. The `const` declarations (lines 62–63) are safe since `querySelector` returns `null` without error; only the calls on those nulls need guarding.
+`index.js` is the shared JS bundle. On `icv_2.html`, `#news-toggler` and `.news__list` don't exist, so `newsToggler.addEventListener(...)` would throw. The `const` declarations (lines 62–63) are safe since `querySelector` returns `null` without error; only the calls on those nulls need guarding.
 
 - [ ] **Step 1: Wrap the news toggler IIFE and the `mobileMatch` handler**
 
@@ -894,7 +894,7 @@ In `src/index.html`, find the header `ul.menu__list`. Between the "Новост�
 
 ```html
               <li class="menu__item">
-                <a href="products.html" class="menu__link">Продукты</a>
+                <a href="icv_2.html" class="menu__link">Продукты</a>
               </li>
 ```
 
@@ -904,7 +904,7 @@ Find `ul.footer__menu__list`. Between "Новости" and "Контакты" `<
 
 ```html
             <li class="footer__menu__item">
-              <a href="products.html" class="menu__link">Продукты</a>
+              <a href="icv_2.html" class="menu__link">Продукты</a>
             </li>
 ```
 
@@ -937,7 +937,7 @@ Expected:
 ```
 # build/
 index.html
-products.html
+icv_2.html
 
 # build/public/
 Opisanie_PO_ICV_2.0.pdf
@@ -959,9 +959,9 @@ Open `http://localhost:3000`. Check all of the following:
 **On `index.html`:**
 - "Продукты" visible in header nav (between "Новости" and "Контакты")
 - "Продукты" visible in footer nav
-- Clicking "Продукты" in header navigates to `products.html`
+- Clicking "Продукты" in header navigates to `icv_2.html`
 
-**On `products.html`:**
+**On `icv_2.html`:**
 - Blue hero section shows "Система контроля управления доступом ICV 2.0" and the purpose text
 - "ФУНКЦИИ СИСТЕМЫ" section shows 6 cards with blue stroke icons (video camera, car, monitor, pass card, parking P, integration nodes)
 - "ДОКУМЕНТАЦИЯ" section shows a blue-bordered card with 2 licensing phrases

@@ -20,7 +20,7 @@
       content="ICV 2.0, система контроля управления доступом, СКУД, программное обеспечение контроля доступа, распознавание номеров, видеоаналитика, управление пропусками, парковочные зоны"
     />
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+    <script>
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -103,7 +103,7 @@
                 <a href="index.html#news" class="menu__link">Новости</a>
               </li>
               <li class="menu__item">
-                <a href="products.html" class="menu__link">Продукты</a>
+                <a href="icv_2.html" class="menu__link">Продукты</a>
               </li>
               <li class="menu__item">
                 <a href="#footer" class="menu__link">Контакты</a>
@@ -115,16 +115,70 @@
     </header>
     <main>
       <section class="product-hero" id="product-hero">
-        <div class="product-hero__container">
+        <div class="product-hero__left">
           <h1 class="product-hero__title">
-            Система контроля управления доступом ICV&nbsp;2.0
+            Система контроля управления доступом
+            <span class="product-hero__title-accent">ICV&nbsp;2.0</span>
           </h1>
           <p class="product-hero__desc">
-            ПО предназначено для автоматизации и снижения стоимости
-            эксплуатации системы пропуска автомобилей на ограниченную для
-            проезда территорию с помощью анализа видеоизображения и
-            распознавания инцидентов
+            ПО предназначено для автоматизации и снижения стоимости эксплуатации
+            системы пропуска автомобилей на ограниченную для проезда территорию
+            с помощью анализа видеоизображения и распознавания инцидентов
           </p>
+        </div>
+        <div class="product-hero__right" aria-hidden="true">
+          <div class="product-hero__ring product-hero__ring--outer"></div>
+          <div class="product-hero__ring product-hero__ring--inner"></div>
+          <div class="product-hero__circle"></div>
+          <div class="product-hero__icon">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              aria-hidden="true"
+            >
+              <rect
+                x="4"
+                y="12"
+                width="32"
+                height="24"
+                rx="4"
+                stroke="rgba(255,255,255,0.85)"
+                stroke-width="2.2"
+              />
+              <circle
+                cx="20"
+                cy="24"
+                r="7"
+                stroke="rgba(255,255,255,0.85)"
+                stroke-width="2.2"
+              />
+              <circle cx="20" cy="24" r="3" fill="rgba(168,202,255,0.7)" />
+              <path
+                d="M36 19l8-5v20l-8-5V19z"
+                stroke="rgba(255,255,255,0.7)"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span
+            class="product-hero__dot"
+            style="width: 8px; height: 8px; right: 175px; top: 30%"
+          ></span>
+          <span
+            class="product-hero__dot"
+            style="width: 5px; height: 5px; right: 65px; top: 22%"
+          ></span>
+          <span
+            class="product-hero__dot"
+            style="width: 6px; height: 6px; right: 35px; bottom: 28%"
+          ></span>
+          <span
+            class="product-hero__dot"
+            style="width: 4px; height: 4px; right: 160px; bottom: 32%"
+          ></span>
         </div>
       </section>
 
@@ -191,9 +245,7 @@
               height="32"
               aria-hidden="true"
             >
-              <use
-                xlink:href="img/products-sprite.svg#icon-parking-zone"
-              ></use>
+              <use xlink:href="img/products-sprite.svg#icon-parking-zone"></use>
             </svg>
             <p>Настройка парковочных зон</p>
           </li>
@@ -204,9 +256,7 @@
               height="32"
               aria-hidden="true"
             >
-              <use
-                xlink:href="img/products-sprite.svg#icon-integration"
-              ></use>
+              <use xlink:href="img/products-sprite.svg#icon-integration"></use>
             </svg>
             <p>Настройка сценариев интеграции с внешними системами</p>
           </li>
@@ -215,7 +265,7 @@
 
       <section class="product-docs" id="product-docs">
         <div class="product-docs__container">
-          <h2 class="section__title">ДОКУМЕНТАЦИЯ</h2>
+          <h2 class="section__title">ЛИЦЕНЗИОННАЯ ПОЛИТИКА</h2>
           <div class="product-docs__info">
             <p class="product-docs__note">
               Стоимость ПО рассчитывается индивидуально
@@ -226,16 +276,16 @@
           </div>
           <div class="product-docs__downloads">
             <a
-              href="public/Opisanie_PO_ICV_2.0.pdf"
+              href="public/Руководство_пользователя.pdf"
               download
               class="callback__btn product-docs__dl-btn"
-              >Opisanie_PO_ICV_2.0.pdf</a
+              >Руководство пользователя</a
             >
             <a
-              href="public/Rukovodstvo_polzovatelya_ICV_2.0.pdf"
+              href="public/Инструкция_по_установке_и_эксплуатации.pdf"
               download
               class="callback__btn product-docs__dl-btn"
-              >Rukovodstvo_polzovatelya_ICV_2.0.pdf</a
+              >Инструкция по установке и эксплуатации</a
             >
           </div>
         </div>
@@ -277,7 +327,7 @@
               <a href="index.html#news" class="menu__link">Новости</a>
             </li>
             <li class="footer__menu__item">
-              <a href="products.html" class="menu__link">Продукты</a>
+              <a href="icv_2.html" class="menu__link">Продукты</a>
             </li>
             <li class="footer__menu__item">
               <a href="#footer" class="menu__link">Контакты</a>

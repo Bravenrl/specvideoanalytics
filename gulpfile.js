@@ -50,7 +50,7 @@ const minifyHtml = () =>
         basepath: '@file',
       })
     )
-    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.analyzer({ ignoreLevel: 'info' }))
     .pipe(htmlValidator.reporter())
     .pipe(dest('build'))
     .pipe(browser.stream());
